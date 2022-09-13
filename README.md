@@ -1,4 +1,5 @@
 # Google Cloud SDK + Node
+
 A docker image combining the Google Cloud SDK and nodejs in the same container.
 
 Feel free to create issues with requests for new versions. Pull requests are also welcome.
@@ -11,3 +12,4 @@ Useful for Continuous Deployment of node applications to Google Cloud.
 
 - **Alpine** `nikolajdl/gcloud-sdk-nodejs:alpine` Minimalist versions of the latest node and gcloud-sdk images
 - **Latest** `nikolajdl/gcloud-sdk-nodejs:latest` Latest full versions of the node and gcloud-sdk images
+- **LTS** `nikolajdl/gcloud-sdk-nodejs:lts` Latest LTS full version of the node and gcloud-sdk images
