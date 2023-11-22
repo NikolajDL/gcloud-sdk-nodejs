@@ -36,6 +36,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ${{ matrix.node_version }}/Dockerfile
+          file: node-${{ matrix.node_version }}/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gcloud-sdk-nodejs:${{ matrix.node_version }}
