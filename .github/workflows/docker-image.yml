@@ -9,18 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version:
-          [
-            "16",
-            "16-alpine",
-            "18",
-            "18-alpine",
-            "20",
-            "20-alpine",
-            "alpine",
-            "lts",
-            "latest",
-          ]
+        node_version: ["16", "18", "20", "lts", "latest"]
 
     steps:
       - name: Checkout
@@ -36,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: node-${{ matrix.node_version }}/Dockerfile
-          no-cache: true
+          file: Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gcloud-sdk-nodejs:${{ matrix.node_version }}
+          build-args: NODE_MAJOR=${{ matrix.node_version }}
