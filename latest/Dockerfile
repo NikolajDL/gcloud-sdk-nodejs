@@ -1,4 +1,4 @@
 FROM node:latest as node
 
-FROM google/cloud-sdk:latest
+FROM google/cloud-sdk:alpine
 COPY --from=node . .
