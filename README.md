@@ -8,11 +8,9 @@ Useful for Continuous Deployment of node applications to Google Cloud.
 
 ## Docker tags available
 
+The image is based off of the slim version of the google/cloud-sdk image,
+and then installs the specified nodejs version on top of it.
+
+Each node version from node v16 and onwards, are created as tags and are available here:
+
 [View repository on Docker Hub](https://hub.docker.com/r/nikolajdl/gcloud-sdk-nodejs)
-
-Example images:
-
-- **Alpine** `nikolajdl/gcloud-sdk-nodejs:alpine` Minimalist versions of the latest node and gcloud-sdk images
-- **Latest** `nikolajdl/gcloud-sdk-nodejs:latest` Latest full versions of the node and gcloud-sdk images
-- **LTS** `nikolajdl/gcloud-sdk-nodejs:lts` Latest LTS full version of the node and gcloud-sdk images
-- more...
