@@ -37,5 +37,6 @@ jobs:
         with:
           context: .
           file: node-${{ matrix.node_version }}/Dockerfile
+          no-cache: true
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gcloud-sdk-nodejs:${{ matrix.node_version }}
